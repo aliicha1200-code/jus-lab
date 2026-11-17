@@ -1,0 +1,626 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --primary: #164B83;
+  --secondary: #15467e;
+  --background: #F1F5FA;
+  --text: #1E293B;
+  --muted: #64748B;
+  --border: #DCE5EF;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--background);
+  color: var(--text);
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 245px;
+  background: #102E4D;
+  color: white;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar h2 {
+  font-size: 21px;
+  margin: 0 0 45px;
+}
+
+.menu-title {
+  color: #91A9C2;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+}
+
+nav {
+  display: grid;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+nav a {
+  padding: 13px;
+  border-radius: 8px;
+  color: #C6D5E5;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+nav a.active {
+  background: #245B91;
+  color: white;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+  display: grid;
+  gap: 7px;
+  font-size: 13px;
+}
+
+.sidebar-bottom small {
+  color: #91A9C2;
+}
+
+.main {
+  flex: 1;
+  padding: 35px;
+  min-width: 0;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.topbar small {
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 25px;
+  margin: 8px 0 0;
+}
+
+.status {
+  background: #E3F3ED;
+  color: #218568;
+  border-radius: 20px;
+  padding: 10px 14px;
+  font-size: 12px;
+}
+
+.welcome {
+  background: linear-gradient(110deg, #164B83, #3478C8);
+  border-radius: 16px;
+  padding: 35px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.welcome p {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  opacity: .8;
+}
+
+.welcome h2 {
+  font-size: 25px;
+  margin: 15px 0 10px;
+}
+
+.welcome span {
+  font-size: 13px;
+  opacity: .9;
+}
+
+.welcome-icon {
+  font-size: 65px;
+}
+
+.section-title {
+  font-size: 18px;
+  margin: 35px 0 18px;
+}
+
+.operations {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.operation {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 22px;
+}
+
+.operation > span {
+  color: var(--secondary);
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.operation h3 {
+  font-size: 16px;
+  margin: 15px 0 8px;
+}
+
+.operation p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+footer {
+  margin-top: 45px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+@media (max-width: 850px) {
+  .sidebar { width: 190px; }
+  .main { padding: 22px; }
+  .operations { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .app { display: block; }
+  .sidebar { width: 100%; padding: 15px; }
+  .sidebar h2 { margin-bottom: 15px; }
+  nav { display: flex; flex-wrap: wrap; }
+  .sidebar-bottom { display: none; }
+  .main { padding: 18px; }
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .operations { grid-template-columns: 1fr; }
+  .welcome { padding: 23px; }
+  .welcome-icon { font-size: 40px; }
+}
+/* ================================
+   JUSLAB — LUXURY AUTH DESIGN
+================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+.auth-page {
+  min-height: 100vh;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 45px;
+  background:
+    radial-gradient(ellipse at 15% 15%, rgba(20, 76, 145, 0.22), transparent 42%),
+    radial-gradient(ellipse at 85% 85%, rgba(14, 54, 105, 0.25), transparent 40%),
+    #070d18;
+  color: #f5f8ff;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.auth-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  pointer-events: none;
+}
+
+.glow-one {
+  width: 350px;
+  height: 350px;
+  background: rgba(23, 104, 210, 0.18);
+  top: -120px;
+  left: -100px;
+}
+
+.glow-two {
+  width: 300px;
+  height: 300px;
+  background: rgba(24, 65, 130, 0.2);
+  bottom: -100px;
+  right: -80px;
+}
+
+.auth-layout {
+  width: 100%;
+  max-width: 1120px;
+  min-height: 650px;
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 0.85fr;
+  align-items: center;
+  gap: 70px;
+}
+
+/* LEFT SIDE */
+
+.auth-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 570px;
+  padding: 15px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-size: 27px;
+  font-weight: 800;
+  letter-spacing: -1.2px;
+  color: #ffffff;
+}
+
+.brand > span > span {
+  color: #4c9cff;
+}
+
+.brand-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(94, 164, 255, 0.35);
+  border-radius: 15px;
+  background: linear-gradient(145deg, #173e70, #0b1b31);
+  color: #7db8ff;
+  font-size: 26px;
+  box-shadow: 0 0 25px rgba(37, 117, 220, 0.15);
+}
+
+.intro-content {
+  max-width: 520px;
+}
+
+.eyebrow {
+  color: #63a8ff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  margin-bottom: 22px;
+}
+
+.intro-content h1 {
+  color: #ffffff;
+  font-size: clamp(38px, 5vw, 58px);
+  line-height: 1.2;
+  letter-spacing: -2.5px;
+  font-weight: 800;
+  margin: 0 0 25px;
+}
+
+.intro-content h1 span {
+  background: linear-gradient(90deg, #65b5ff, #3679e8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.intro-description {
+  max-width: 420px;
+  color: #94a6c0;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.intro-footer {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  color: #61738c;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.footer-line {
+  width: 35px;
+  height: 2px;
+  background: #438fe9;
+}
+
+/* RIGHT CARD */
+
+.auth-card {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 42px;
+  border: 1px solid rgba(137, 176, 226, 0.17);
+  border-radius: 25px;
+  background: linear-gradient(
+    145deg,
+    rgba(22, 37, 60, 0.92),
+    rgba(10, 19, 34, 0.96)
+  );
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.38),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+}
+
+.card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 55px;
+}
+
+.secure-label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #a9bdd8;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+}
+
+.secure-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #45d6a0;
+  box-shadow: 0 0 12px rgba(69, 214, 160, 0.6);
+}
+
+.card-number {
+  color: #536985;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.auth-heading {
+  margin-bottom: 35px;
+}
+
+.auth-heading .eyebrow {
+  margin-bottom: 12px;
+  font-size: 9px;
+}
+
+.auth-heading h2 {
+  color: #ffffff;
+  font-size: 32px;
+  letter-spacing: -1.2px;
+  font-weight: 800;
+  margin: 0 0 12px;
+}
+
+.auth-heading > p:last-child {
+  color: #8498b3;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* INPUTS */
+
+.auth-card form label {
+  display: block;
+  margin: 24px 0 10px;
+  color: #a9bad0;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.auth-input {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 16px;
+  height: 55px;
+  border: 1px solid rgba(135, 166, 207, 0.2);
+  border-radius: 12px;
+  background: rgba(4, 12, 25, 0.55);
+  transition: all 0.25s ease;
+}
+
+.auth-input:focus-within {
+  border-color: #398eea;
+  background: rgba(15, 38, 68, 0.7);
+  box-shadow: 0 0 0 4px rgba(57, 142, 234, 0.1);
+}
+
+.auth-input > span {
+  color: #579ce9;
+  font-size: 17px;
+}
+
+.auth-input input {
+  width: 100%;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 12px;
+}
+
+.auth-input input::placeholder {
+  color: #61738c;
+}
+
+/* BUTTON */
+
+.auth-submit {
+  width: 100%;
+  height: 55px;
+  margin-top: 35px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(100deg, #1765c4, #398ff0);
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(27, 105, 204, 0.22);
+  transition: all 0.25s ease;
+}
+
+.auth-submit:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(39, 126, 231, 0.35);
+  background: linear-gradient(100deg, #2479dc, #56a5ff);
+}
+
+.auth-submit:active {
+  transform: translateY(0);
+}
+
+.auth-submit:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+/* MESSAGES */
+
+.auth-card .auth-message {
+  margin-top: 18px;
+  color: #f2bd75;
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+/* SWITCH SIGN IN / SIGN UP */
+
+.auth-switch {
+  margin-top: 28px;
+  text-align: center;
+  color: #8295af;
+  font-size: 11px;
+}
+
+.auth-switch button {
+  border: none;
+  background: transparent;
+  color: #65aaff;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.auth-switch button:hover {
+  color: #a1ceff;
+  text-decoration: underline;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 850px) {
+  .auth-page {
+    padding: 25px;
+  }
+
+  .auth-layout {
+    grid-template-columns: 1fr;
+    max-width: 470px;
+    gap: 35px;
+  }
+
+  .auth-intro {
+    min-height: auto;
+    gap: 30px;
+  }
+
+  .intro-content h1 {
+    font-size: 36px;
+  }
+
+  .intro-description {
+    font-size: 12px;
+  }
+
+  .intro-footer {
+    display: none;
+  }
+
+  .auth-card {
+    padding: 32px 26px;
+  }
+
+  .card-top {
+    margin-bottom: 35px;
+  }
+}
+
+@media (max-width: 420px) {
+  .auth-page {
+    padding: 18px;
+  }
+
+  .auth-card {
+    padding: 27px 20px;
+    border-radius: 19px;
+  }
+
+  .auth-heading h2 {
+    font-size: 27px;
+  }
+
+  .intro-content h1 {
+    font-size: 32px;
+  }
+}
+.creator-credit {
+  margin-top: 22px;
+  padding-top: 17px;
+  border-top: 1px solid rgba(130, 169, 220, 0.16);
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.creator-credit span {
+  color: #7189a8;
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 1.6px;
+}
+
+.creator-credit strong {
+  color: #69aaff;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.creator-credit small {
+  color: #8498b3;
+  font-size: 10px;
+}
